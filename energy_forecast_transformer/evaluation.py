@@ -4,10 +4,10 @@ import numpy as np
 
 def plot_predictions(y_true, y_pred):
     plt.figure(figsize=(12,5))
-    plt.plot(y_true, label='Echt')
-    plt.plot(y_pred, label='Vorhersage')
+    plt.plot(y_true, label='Actual')
+    plt.plot(y_pred, label='Prediction')
     plt.legend()
-    plt.title('Energieverbrauch: Vorhersage vs. Echt')
+    plt.title('Energy Consumption: Prediction vs. Actual')
     plt.show()
 
 def print_metrics(y_true, y_pred):

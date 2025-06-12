@@ -3,7 +3,7 @@ from tensorflow.keras import layers
 import numpy as np
 
 def create_time_series_windows(data, window_size, target_col):
-    """Erstellt Input- und Output-Fenster für Zeitreihenprognose."""
+    """Create input and output windows for time series forecasting."""
     X, y = [], []
     for i in range(len(data) - window_size):
         X.append(data.iloc[i:i+window_size].values)
@@ -11,7 +11,7 @@ def create_time_series_windows(data, window_size, target_col):
     return np.array(X), np.array(y)
 
 def build_transformer_model(input_shape):
-    """Erstellt ein einfaches Transformer-Modell für Zeitreihen."""
+    """Build a simple Transformer model for time series forecasting."""
     inputs = keras.Input(shape=input_shape)
     x = layers.LayerNormalization(epsilon=1e-6)(inputs)
     x = layers.MultiHeadAttention(num_heads=2, key_dim=16)(x, x)
