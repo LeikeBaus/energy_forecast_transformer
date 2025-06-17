@@ -1,0 +1,15 @@
+pandas<2.2
+numpy
+scikit-learn
+matplotlib
+requests
+kaggle
+transformers
+jupyter
+summarytools
+datasets
+evaluate
+accelerate
+gluonts
+ujson
+torch
